@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "4e28190e-cec6-49a8-aac3-6cda2001906b",
+		"name": "BT_FoodApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33341909"
+	},
+	"item": [
+		{
+			"name": "LIKE_postRestaurants",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\": 2,\r\n\"resId\": 2\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/like/restaurants"
+			},
+			"response": []
+		},
+		{
+			"name": "RATE_Restaurants",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":4,\r\n    \"resId\": 3,\r\n    \"amount\": 222123,\r\n    \"date\": \"22/05/2011\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/rate/restaurants"
+			},
+			"response": []
+		},
+		{
+			"name": "ORDER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\": \"4\",\r\n\"foodId\": \"2\",\r\n\"amount\" : 522,\r\n\"code\" : \"\",\r\n\"arr_sub_id\" : \"\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/order"
+			},
+			"response": []
+		},
+		{
+			"name": "LIKE_getRestaurantById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{domain}}/like/restaurants/1"
+			},
+			"response": []
+		},
+		{
+			"name": "LIKE_getUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{domain}}/like/users/1"
+			},
+			"response": []
+		},
+		{
+			"name": "RATE_RestaurantsById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"resId\" : \"3qweqwe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/rate/get-restaurants"
+			},
+			"response": []
+		},
+		{
+			"name": "RATE_UsersById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/rate/get-users"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
